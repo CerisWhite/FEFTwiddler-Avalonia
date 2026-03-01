@@ -1,5 +1,5 @@
-# FEFTwiddler
-A save editor for Fire Emblem Fates
+# FEFTwiddler-Avalonia
+A modern and universal(-ish) update to the original [FEFTwiddler](https://github.com/Soaprman/FEFTwiddler) using Avalonia for the UI. (Only tested on Linux.)
 
 What this does:
 * Opens a "chapter" save
