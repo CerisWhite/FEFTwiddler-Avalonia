@@ -1,5 +1,4 @@
-﻿using System;
-using System.Drawing;
+using System;
 using System.IO;
 using System.Linq;
 
@@ -332,151 +331,150 @@ namespace FEFTwiddler.Model.GlobalSaveRegions
         // Up to eighty-eight (0x58) bytes (0x00 through 0x57)
         // Why there gotta be so many of these damn kids?????
 
-        public Color HairColor_KanaM
+        public GameColor HairColor_KanaM
         {
             get { return GetChildHairColor(0x00); }
             set { SetChildHairColor(0x00, value); }
         }
 
-        public Color HairColor_KanaF
+        public GameColor HairColor_KanaF
         {
             get { return GetChildHairColor(0x04); }
             set { SetChildHairColor(0x04, value); }
         }
 
-        public Color HairColor_Shigure
+        public GameColor HairColor_Shigure
         {
             get { return GetChildHairColor(0x08); }
             set { SetChildHairColor(0x08, value); }
         }
 
-        public Color HairColor_Dwyer
+        public GameColor HairColor_Dwyer
         {
             get { return GetChildHairColor(0x0C); }
             set { SetChildHairColor(0x0C, value); }
         }
 
-        public Color HairColor_Sophie
+        public GameColor HairColor_Sophie
         {
             get { return GetChildHairColor(0x10); }
             set { SetChildHairColor(0x10, value); }
         }
 
-        public Color HairColor_Midori
+        public GameColor HairColor_Midori
         {
             get { return GetChildHairColor(0x14); }
             set { SetChildHairColor(0x14, value); }
         }
 
-        public Color HairColor_Shiro
+        public GameColor HairColor_Shiro
         {
             get { return GetChildHairColor(0x18); }
             set { SetChildHairColor(0x18, value); }
         }
 
-        public Color HairColor_Kiragi
+        public GameColor HairColor_Kiragi
         {
             get { return GetChildHairColor(0x1C); }
             set { SetChildHairColor(0x1C, value); }
         }
 
-        public Color HairColor_Asugi
+        public GameColor HairColor_Asugi
         {
             get { return GetChildHairColor(0x20); }
             set { SetChildHairColor(0x20, value); }
         }
 
-        public Color HairColor_Selkie
+        public GameColor HairColor_Selkie
         {
             get { return GetChildHairColor(0x24); }
             set { SetChildHairColor(0x24, value); }
         }
 
-        public Color HairColor_Hisame
+        public GameColor HairColor_Hisame
         {
             get { return GetChildHairColor(0x28); }
             set { SetChildHairColor(0x28, value); }
         }
 
-        public Color HairColor_Mitama
+        public GameColor HairColor_Mitama
         {
             get { return GetChildHairColor(0x2C); }
             set { SetChildHairColor(0x2C, value); }
         }
 
-        public Color HairColor_Caeldori
+        public GameColor HairColor_Caeldori
         {
             get { return GetChildHairColor(0x30); }
             set { SetChildHairColor(0x30, value); }
         }
 
-        public Color HairColor_Rhajat
+        public GameColor HairColor_Rhajat
         {
             get { return GetChildHairColor(0x34); }
             set { SetChildHairColor(0x34, value); }
         }
 
-        public Color HairColor_Siegbert
+        public GameColor HairColor_Siegbert
         {
             get { return GetChildHairColor(0x38); }
             set { SetChildHairColor(0x38, value); }
         }
 
-        public Color HairColor_Forrest
+        public GameColor HairColor_Forrest
         {
             get { return GetChildHairColor(0x3C); }
             set { SetChildHairColor(0x3C, value); }
         }
 
-        public Color HairColor_Ignatius
+        public GameColor HairColor_Ignatius
         {
             get { return GetChildHairColor(0x40); }
             set { SetChildHairColor(0x40, value); }
         }
 
-        public Color HairColor_Velouria
+        public GameColor HairColor_Velouria
         {
             get { return GetChildHairColor(0x44); }
             set { SetChildHairColor(0x44, value); }
         }
 
-        public Color HairColor_Percy
+        public GameColor HairColor_Percy
         {
             get { return GetChildHairColor(0x48); }
             set { SetChildHairColor(0x48, value); }
         }
 
-        public Color HairColor_Ophelia
+        public GameColor HairColor_Ophelia
         {
             get { return GetChildHairColor(0x4C); }
             set { SetChildHairColor(0x4C, value); }
         }
 
-        public Color HairColor_Soleil
+        public GameColor HairColor_Soleil
         {
             get { return GetChildHairColor(0x50); }
             set { SetChildHairColor(0x50, value); }
         }
 
-        public Color HairColor_Nina
+        public GameColor HairColor_Nina
         {
             get { return GetChildHairColor(0x54); }
             set { SetChildHairColor(0x54, value); }
         }
 
-        private Color GetChildHairColor(int offset)
+        private GameColor GetChildHairColor(int offset)
         {
             // Convert alpha to 255 here
-            try { return Color.FromArgb(255, _rawHairColors[offset], _rawHairColors[offset + 1], _rawHairColors[offset + 2]); }
+            try { return GameColor.FromArgb(255, _rawHairColors[offset], _rawHairColors[offset + 1], _rawHairColors[offset + 2]); }
             catch (IndexOutOfRangeException)
             {
-                // There's no such thing as "Color.None", so here's a color that Fates will never produce.
-                // This way, the GUI can tell that no color was found and make its own decisions.
-                return Color.FromArgb(1,0,0,0);
+                // No such thing as "no color" — return the sentinel value so GUI can detect it
+                return GameColor.None;
             }
         }
 
-        private void SetChildHairColor(int offset, Color color)
+        private void SetChildHairColor(int offset, GameColor color)
         {
             try
             {
@@ -504,9 +502,9 @@ namespace FEFTwiddler.Model.GlobalSaveRegions
         // Ten unknown bytes (0x19 through 0x22)
         // Probably hair style, face marks, etc. for Corrin M
 
-        public Color HairColor_CorrinM
+        public GameColor HairColor_CorrinM
         {
-            get { return Color.FromArgb(_rawBlock4[0x26], _rawBlock4[0x23], _rawBlock4[0x24], _rawBlock4[0x25]); }
+            get { return GameColor.FromArgb(_rawBlock4[0x26], _rawBlock4[0x23], _rawBlock4[0x24], _rawBlock4[0x25]); }
             set
             {
                 _rawBlock4[0x23] = value.R;
@@ -531,9 +529,9 @@ namespace FEFTwiddler.Model.GlobalSaveRegions
         // Ten unknown bytes (0x45 through 0x4E)
         // Probably hair style, face marks, etc. for Corrin F
 
-        public Color HairColor_CorrinF
+        public GameColor HairColor_CorrinF
         {
-            get { return Color.FromArgb(_rawBlock4[0x52], _rawBlock4[0x4F], _rawBlock4[0x50], _rawBlock4[0x51]); }
+            get { return GameColor.FromArgb(_rawBlock4[0x52], _rawBlock4[0x4F], _rawBlock4[0x50], _rawBlock4[0x51]); }
             set
             {
                 _rawBlock4[0x4F] = value.R;

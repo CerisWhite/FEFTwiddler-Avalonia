@@ -1,6 +1,8 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Linq;
 using System.Xml.Linq;
+using Avalonia.Platform;
 using FEFTwiddler.Extensions;
 
 namespace FEFTwiddler.Data
@@ -26,10 +28,16 @@ namespace FEFTwiddler.Data
             _data = XElement.Parse(data);
         }
 
+        protected void LoadDataFromAsset(string fileName)
+        {
+            var uri = new Uri($"avares://FEFTwiddler/Resources/Data/{fileName}");
+            using var stream = AssetLoader.Open(uri);
+            using var reader = new StreamReader(stream);
+            _data = XElement.Parse(reader.ReadToEnd());
+        }
+
         protected void LoadAddonData(string addonDataSubDirectory)
         {
-            // Don't call this in design mode, since we may not have permission to do Directory stuff in the Visual Studio temp folders
-            if (Config.InDesignMode()) return;
 
             var path = _addonDataDirectory + "/" + addonDataSubDirectory;
             Directory.CreateDirectory(path);

@@ -10,7 +10,7 @@ namespace FEFTwiddler.Data
     {
         public ItemDatabase(Enums.Language language) : base(language)
         {
-            LoadData(Properties.Resources.Data_Items);
+            LoadDataFromAsset("Items.xml");
         }
 
         public Item GetByID(Enums.Item itemId)
@@ -18,9 +18,9 @@ namespace FEFTwiddler.Data
             var row = _data
                 .Elements("item")
                 .Where((x) => x.Attribute("id").Value == ((ushort)itemId).ToString())
-                .First();
+                .FirstOrDefault();
 
-            return FromElement(row);
+            return row != null ? FromElement(row) : GetByID(Enums.Item.None);
         }
 
         /// <summary>

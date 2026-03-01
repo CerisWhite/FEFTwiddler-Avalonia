@@ -1,0 +1,23 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="FEFTwiddler.GUI.UnitViewer.Supports"
+        Width="400" Height="500"
+        WindowStartupLocation="CenterOwner">
+    <Grid RowDefinitions="*,Auto,Auto" Margin="8">
+        <ScrollViewer Grid.Row="0">
+            <StackPanel x:Name="stkSupports" Spacing="2" />
+        </ScrollViewer>
+        <StackPanel Grid.Row="1" Spacing="4" Margin="0,8,0,4">
+            <StackPanel Orientation="Horizontal" Spacing="8">
+                <TextBlock Text="A+ Partner:" VerticalAlignment="Center" />
+                <ComboBox x:Name="cmbAPlus" Width="180" />
+            </StackPanel>
+            <CheckBox x:Name="chkPolygamy" Content="Allow multiple S supports (polygamy mode)" />
+        </StackPanel>
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Spacing="8">
+            <Button x:Name="btnMaxSupports" Content="Max Supports" Click="BtnMaxSupports_Click" />
+            <Button x:Name="btnMaxSupportsConversation" Content="Max (with Conversation)" Click="BtnMaxSupportsConversation_Click" />
+            <Button x:Name="btnClose" Content="Close" Click="BtnClose_Click" MinWidth="75" />
+        </StackPanel>
+    </Grid>
+</Window>

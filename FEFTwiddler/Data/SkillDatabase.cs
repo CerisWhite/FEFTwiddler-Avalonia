@@ -10,7 +10,7 @@ namespace FEFTwiddler.Data
     {
         public SkillDatabase(Enums.Language language) : base(language)
         {
-            LoadData(Properties.Resources.Data_Skills);
+            LoadDataFromAsset("Skills.xml");
         }
 
         public Skill GetByID(Enums.Skill skillId)

@@ -1,0 +1,14 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="FEFTwiddler.GUI.UnitViewer.BattleData">
+    <StackPanel Orientation="Horizontal" Spacing="12">
+        <StackPanel Orientation="Horizontal" Spacing="4" VerticalAlignment="Center">
+            <TextBlock Text="Battles:" VerticalAlignment="Center" Width="100" />
+            <NumericUpDown x:Name="numBattles" Minimum="0" Maximum="65535" Width="130" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Spacing="4" VerticalAlignment="Center">
+            <TextBlock Text="Victories:" VerticalAlignment="Center" Width="100" />
+            <NumericUpDown x:Name="numVictories" Minimum="0" Maximum="65535" Width="130" />
+        </StackPanel>
+    </StackPanel>
+</UserControl>

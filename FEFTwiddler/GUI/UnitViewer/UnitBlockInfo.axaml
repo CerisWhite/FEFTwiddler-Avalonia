@@ -1,0 +1,18 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="FEFTwiddler.GUI.UnitViewer.UnitBlockInfo">
+    <StackPanel Spacing="4">
+        <StackPanel Orientation="Horizontal" Spacing="8">
+            <RadioButton x:Name="rdoLiving" Content="Living" GroupName="UnitBlock" />
+            <RadioButton x:Name="rdoDeployed" Content="Deployed" GroupName="UnitBlock" />
+            <RadioButton x:Name="rdoAbsent" Content="Absent" GroupName="UnitBlock" />
+            <RadioButton x:Name="rdoDeadByGameplay" Content="Dead (Gameplay)" GroupName="UnitBlock" />
+            <RadioButton x:Name="rdoDeadByPlot" Content="Dead (Plot)" GroupName="UnitBlock" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Spacing="8">
+            <TextBlock Text="Death Chapter:" VerticalAlignment="Center" />
+            <ComboBox x:Name="cmbDeathChapter" Width="200" />
+            <CheckBox x:Name="chkChallenge" Content="Challenge mission" />
+        </StackPanel>
+    </StackPanel>
+</UserControl>

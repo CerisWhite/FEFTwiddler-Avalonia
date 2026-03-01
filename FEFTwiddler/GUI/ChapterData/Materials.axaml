@@ -1,0 +1,120 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="FEFTwiddler.GUI.ChapterData.Materials">
+    <StackPanel Spacing="4">
+        <Button x:Name="btnMaxMaterials" Content="Max All Materials" Click="BtnMaxMaterials_Click" HorizontalAlignment="Left" />
+        <WrapPanel>
+            <!-- Row 1 -->
+            <StackPanel Orientation="Horizontal" Spacing="4" Margin="0,0,8,4">
+                <Image x:Name="imgAmber" Width="20" Height="20" />
+                <TextBlock Text="Amber:" VerticalAlignment="Center" Width="100" />
+                <NumericUpDown x:Name="numAmber" Minimum="0" Maximum="99" Width="110" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Spacing="4" Margin="0,0,8,4">
+                <Image x:Name="imgBeans" Width="20" Height="20" />
+                <TextBlock Text="Beans:" VerticalAlignment="Center" Width="100" />
+                <NumericUpDown x:Name="numBeans" Minimum="0" Maximum="99" Width="110" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Spacing="4" Margin="0,0,8,4">
+                <Image x:Name="imgBerries" Width="20" Height="20" />
+                <TextBlock Text="Berries:" VerticalAlignment="Center" Width="100" />
+                <NumericUpDown x:Name="numBerries" Minimum="0" Maximum="99" Width="110" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Spacing="4" Margin="0,0,8,4">
+                <Image x:Name="imgCabbage" Width="20" Height="20" />
+                <TextBlock Text="Cabbage:" VerticalAlignment="Center" Width="100" />
+                <NumericUpDown x:Name="numCabbage" Minimum="0" Maximum="99" Width="110" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Spacing="4" Margin="0,0,8,4">
+                <Image x:Name="imgCoral" Width="20" Height="20" />
+                <TextBlock Text="Coral:" VerticalAlignment="Center" Width="100" />
+                <NumericUpDown x:Name="numCoral" Minimum="0" Maximum="99" Width="110" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Spacing="4" Margin="0,0,8,4">
+                <Image x:Name="imgCrystal" Width="20" Height="20" />
+                <TextBlock Text="Crystal:" VerticalAlignment="Center" Width="100" />
+                <NumericUpDown x:Name="numCrystal" Minimum="0" Maximum="99" Width="110" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Spacing="4" Margin="0,0,8,4">
+                <Image x:Name="imgDaikon" Width="20" Height="20" />
+                <TextBlock Text="Daikon:" VerticalAlignment="Center" Width="100" />
+                <NumericUpDown x:Name="numDaikon" Minimum="0" Maximum="99" Width="110" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Spacing="4" Margin="0,0,8,4">
+                <Image x:Name="imgEmerald" Width="20" Height="20" />
+                <TextBlock Text="Emerald:" VerticalAlignment="Center" Width="100" />
+                <NumericUpDown x:Name="numEmerald" Minimum="0" Maximum="99" Width="110" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Spacing="4" Margin="0,0,8,4">
+                <Image x:Name="imgFish" Width="20" Height="20" />
+                <TextBlock Text="Fish:" VerticalAlignment="Center" Width="100" />
+                <NumericUpDown x:Name="numFish" Minimum="0" Maximum="99" Width="110" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Spacing="4" Margin="0,0,8,4">
+                <Image x:Name="imgJade" Width="20" Height="20" />
+                <TextBlock Text="Jade:" VerticalAlignment="Center" Width="100" />
+                <NumericUpDown x:Name="numJade" Minimum="0" Maximum="99" Width="110" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Spacing="4" Margin="0,0,8,4">
+                <Image x:Name="imgLapis" Width="20" Height="20" />
+                <TextBlock Text="Lapis:" VerticalAlignment="Center" Width="100" />
+                <NumericUpDown x:Name="numLapis" Minimum="0" Maximum="99" Width="110" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Spacing="4" Margin="0,0,8,4">
+                <Image x:Name="imgMeat" Width="20" Height="20" />
+                <TextBlock Text="Meat:" VerticalAlignment="Center" Width="100" />
+                <NumericUpDown x:Name="numMeat" Minimum="0" Maximum="99" Width="110" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Spacing="4" Margin="0,0,8,4">
+                <Image x:Name="imgMilk" Width="20" Height="20" />
+                <TextBlock Text="Milk:" VerticalAlignment="Center" Width="100" />
+                <NumericUpDown x:Name="numMilk" Minimum="0" Maximum="99" Width="110" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Spacing="4" Margin="0,0,8,4">
+                <Image x:Name="imgOnyx" Width="20" Height="20" />
+                <TextBlock Text="Onyx:" VerticalAlignment="Center" Width="100" />
+                <NumericUpDown x:Name="numOnyx" Minimum="0" Maximum="99" Width="110" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Spacing="4" Margin="0,0,8,4">
+                <Image x:Name="imgPeaches" Width="20" Height="20" />
+                <TextBlock Text="Peaches:" VerticalAlignment="Center" Width="100" />
+                <NumericUpDown x:Name="numPeaches" Minimum="0" Maximum="99" Width="110" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Spacing="4" Margin="0,0,8,4">
+                <Image x:Name="imgPearl" Width="20" Height="20" />
+                <TextBlock Text="Pearl:" VerticalAlignment="Center" Width="100" />
+                <NumericUpDown x:Name="numPearl" Minimum="0" Maximum="99" Width="110" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Spacing="4" Margin="0,0,8,4">
+                <Image x:Name="imgQuartz" Width="20" Height="20" />
+                <TextBlock Text="Quartz:" VerticalAlignment="Center" Width="100" />
+                <NumericUpDown x:Name="numQuartz" Minimum="0" Maximum="99" Width="110" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Spacing="4" Margin="0,0,8,4">
+                <Image x:Name="imgRice" Width="20" Height="20" />
+                <TextBlock Text="Rice:" VerticalAlignment="Center" Width="100" />
+                <NumericUpDown x:Name="numRice" Minimum="0" Maximum="99" Width="110" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Spacing="4" Margin="0,0,8,4">
+                <Image x:Name="imgRuby" Width="20" Height="20" />
+                <TextBlock Text="Ruby:" VerticalAlignment="Center" Width="100" />
+                <NumericUpDown x:Name="numRuby" Minimum="0" Maximum="99" Width="110" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Spacing="4" Margin="0,0,8,4">
+                <Image x:Name="imgSapphire" Width="20" Height="20" />
+                <TextBlock Text="Sapphire:" VerticalAlignment="Center" Width="100" />
+                <NumericUpDown x:Name="numSapphire" Minimum="0" Maximum="99" Width="110" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Spacing="4" Margin="0,0,8,4">
+                <Image x:Name="imgTopaz" Width="20" Height="20" />
+                <TextBlock Text="Topaz:" VerticalAlignment="Center" Width="100" />
+                <NumericUpDown x:Name="numTopaz" Minimum="0" Maximum="99" Width="110" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Spacing="4" Margin="0,0,8,4">
+                <Image x:Name="imgWheat" Width="20" Height="20" />
+                <TextBlock Text="Wheat:" VerticalAlignment="Center" Width="100" />
+                <NumericUpDown x:Name="numWheat" Minimum="0" Maximum="99" Width="110" />
+            </StackPanel>
+        </WrapPanel>
+    </StackPanel>
+</UserControl>

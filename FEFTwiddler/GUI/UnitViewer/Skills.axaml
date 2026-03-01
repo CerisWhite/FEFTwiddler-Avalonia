@@ -1,0 +1,30 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="FEFTwiddler.GUI.UnitViewer.Skills">
+    <StackPanel Spacing="4">
+        <TextBlock Text="Equipped Skills" FontWeight="Bold" />
+        <WrapPanel>
+            <StackPanel Orientation="Horizontal" Spacing="4" Margin="0,0,8,4" VerticalAlignment="Center">
+                <Image x:Name="pictSkill1" Width="24" Height="24" />
+                <ComboBox x:Name="cmbSkill1" Width="180" DisplayMemberBinding="{Binding DisplayName}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Spacing="4" Margin="0,0,8,4" VerticalAlignment="Center">
+                <Image x:Name="pictSkill2" Width="24" Height="24" />
+                <ComboBox x:Name="cmbSkill2" Width="180" DisplayMemberBinding="{Binding DisplayName}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Spacing="4" Margin="0,0,8,4" VerticalAlignment="Center">
+                <Image x:Name="pictSkill3" Width="24" Height="24" />
+                <ComboBox x:Name="cmbSkill3" Width="180" DisplayMemberBinding="{Binding DisplayName}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Spacing="4" Margin="0,0,8,4" VerticalAlignment="Center">
+                <Image x:Name="pictSkill4" Width="24" Height="24" />
+                <ComboBox x:Name="cmbSkill4" Width="180" DisplayMemberBinding="{Binding DisplayName}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Spacing="4" Margin="0,0,8,4" VerticalAlignment="Center">
+                <Image x:Name="pictSkill5" Width="24" Height="24" />
+                <ComboBox x:Name="cmbSkill5" Width="180" DisplayMemberBinding="{Binding DisplayName}" />
+            </StackPanel>
+        </WrapPanel>
+        <Button x:Name="btnEditLearnedSkills" Content="Edit Learned Skills..." Click="BtnEditLearnedSkills_Click" HorizontalAlignment="Left" />
+    </StackPanel>
+</UserControl>

@@ -1,0 +1,47 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="FEFTwiddler.GUI.Convoy.ConvoyMain">
+    <Grid RowDefinitions="Auto,*">
+        <!-- Add item toolbar -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Spacing="8" Margin="4">
+            <Image x:Name="picIcon" Width="24" Height="24" />
+            <ComboBox x:Name="cmbItem" Width="220" DisplayMemberBinding="{Binding DisplayName}" />
+            <NumericUpDown x:Name="numCharges" Minimum="0" Maximum="255" Width="110" />
+            <NumericUpDown x:Name="numQuantity" Minimum="1" Maximum="255" Width="110" Value="1" />
+            <Button x:Name="btnAdd" Content="Add" Click="BtnAdd_Click" />
+            <TextBlock x:Name="lblConvoySize" VerticalAlignment="Center" />
+            <Button x:Name="btnEmptyConvoy" Content="Empty Convoy" Foreground="Red" Click="BtnEmptyConvoy_Click" />
+        </StackPanel>
+
+        <!-- Items by tab -->
+        <TabControl Grid.Row="1">
+            <TabItem Header="Swords">
+                <ScrollViewer><StackPanel x:Name="flwSword" Spacing="2" Margin="4" /></ScrollViewer>
+            </TabItem>
+            <TabItem Header="Lances">
+                <ScrollViewer><StackPanel x:Name="flwLance" Spacing="2" Margin="4" /></ScrollViewer>
+            </TabItem>
+            <TabItem Header="Axes">
+                <ScrollViewer><StackPanel x:Name="flwAxe" Spacing="2" Margin="4" /></ScrollViewer>
+            </TabItem>
+            <TabItem Header="Shuriken">
+                <ScrollViewer><StackPanel x:Name="flwShuriken" Spacing="2" Margin="4" /></ScrollViewer>
+            </TabItem>
+            <TabItem Header="Bows">
+                <ScrollViewer><StackPanel x:Name="flwBow" Spacing="2" Margin="4" /></ScrollViewer>
+            </TabItem>
+            <TabItem Header="Tomes">
+                <ScrollViewer><StackPanel x:Name="flwTome" Spacing="2" Margin="4" /></ScrollViewer>
+            </TabItem>
+            <TabItem Header="Staves">
+                <ScrollViewer><StackPanel x:Name="flwStaff" Spacing="2" Margin="4" /></ScrollViewer>
+            </TabItem>
+            <TabItem Header="Stones/NPC">
+                <ScrollViewer><StackPanel x:Name="flwStone" Spacing="2" Margin="4" /></ScrollViewer>
+            </TabItem>
+            <TabItem Header="Consumables">
+                <ScrollViewer><StackPanel x:Name="flwConsumable" Spacing="2" Margin="4" /></ScrollViewer>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</UserControl>

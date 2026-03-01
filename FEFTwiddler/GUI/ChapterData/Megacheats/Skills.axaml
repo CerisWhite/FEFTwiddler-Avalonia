@@ -1,0 +1,92 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="FEFTwiddler.GUI.ChapterData.Megacheats.Skills">
+    <ScrollViewer>
+        <WrapPanel>
+            <StackPanel Margin="4" Spacing="2">
+                <TextBlock Text="Normal Class Skills" FontWeight="Bold" />
+                <StackPanel Orientation="Horizontal" Spacing="4">
+                    <Button x:Name="btnLearnNormalClassSkills" Content="Learn" />
+                    <Button x:Name="btnUnlearnNormalClassSkills" Content="Unlearn" />
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Margin="4" Spacing="2">
+                <TextBlock Text="Corrin Only Skills" FontWeight="Bold" />
+                <StackPanel Orientation="Horizontal" Spacing="4">
+                    <Button x:Name="btnLearnCorrinOnlySkills" Content="Learn" />
+                    <Button x:Name="btnUnlearnCorrinOnlySkills" Content="Unlearn" />
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Margin="4" Spacing="2">
+                <TextBlock Text="Azura Only Skills" FontWeight="Bold" />
+                <StackPanel Orientation="Horizontal" Spacing="4">
+                    <Button x:Name="btnLearnAzuraOnlySkills" Content="Learn" />
+                    <Button x:Name="btnUnlearnAzuraOnlySkills" Content="Unlearn" />
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Margin="4" Spacing="2">
+                <TextBlock Text="Beast Only Skills" FontWeight="Bold" />
+                <StackPanel Orientation="Horizontal" Spacing="4">
+                    <Button x:Name="btnLearnBeastOnlySkills" Content="Learn" />
+                    <Button x:Name="btnUnlearnBeastOnlySkills" Content="Unlearn" />
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Margin="4" Spacing="2">
+                <TextBlock Text="Kitsune Only Skills" FontWeight="Bold" />
+                <StackPanel Orientation="Horizontal" Spacing="4">
+                    <Button x:Name="btnLearnKitsuneOnlySkills" Content="Learn" />
+                    <Button x:Name="btnUnlearnKitsuneOnlySkills" Content="Unlearn" />
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Margin="4" Spacing="2">
+                <TextBlock Text="Wolfskin Only Skills" FontWeight="Bold" />
+                <StackPanel Orientation="Horizontal" Spacing="4">
+                    <Button x:Name="btnLearnWolfskinOnlySkills" Content="Learn" />
+                    <Button x:Name="btnUnlearnWolfskinOnlySkills" Content="Unlearn" />
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Margin="4" Spacing="2">
+                <TextBlock Text="Villager Only Skills" FontWeight="Bold" />
+                <StackPanel Orientation="Horizontal" Spacing="4">
+                    <Button x:Name="btnLearnVillagerOnlySkills" Content="Learn" />
+                    <Button x:Name="btnUnlearnVillagerOnlySkills" Content="Unlearn" />
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Margin="4" Spacing="2">
+                <TextBlock Text="Path Bonus Class Skills" FontWeight="Bold" />
+                <StackPanel Orientation="Horizontal" Spacing="4">
+                    <Button x:Name="btnLearnPathBonusClassSkills" Content="Learn" />
+                    <Button x:Name="btnUnlearnPathBonusClassSkills" Content="Unlearn" />
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Margin="4" Spacing="2">
+                <TextBlock Text="DLC Class Skills" FontWeight="Bold" />
+                <StackPanel Orientation="Horizontal" Spacing="4">
+                    <Button x:Name="btnLearnDlcClassSkills" Content="Learn" />
+                    <Button x:Name="btnUnlearnDlcClassSkills" Content="Unlearn" />
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Margin="4" Spacing="2">
+                <TextBlock Text="Amiibo Class Skills" FontWeight="Bold" />
+                <StackPanel Orientation="Horizontal" Spacing="4">
+                    <Button x:Name="btnLearnAmiiboClassSkills" Content="Learn" />
+                    <Button x:Name="btnUnlearnAmiiboClassSkills" Content="Unlearn" />
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Margin="4" Spacing="2">
+                <TextBlock Text="Enemy and NPC Skills" FontWeight="Bold" />
+                <StackPanel Orientation="Horizontal" Spacing="4">
+                    <Button x:Name="btnLearnEnemyAndNpcSkills" Content="Learn" />
+                    <Button x:Name="btnUnlearnEnemyAndNpcSkills" Content="Unlearn" />
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Margin="4" Spacing="2">
+                <TextBlock Text="All Skills" FontWeight="Bold" />
+                <StackPanel Orientation="Horizontal" Spacing="4">
+                    <Button x:Name="btnLearnAllSkills" Content="Learn All" />
+                    <Button x:Name="btnUnlearnAllSkills" Content="Unlearn All" />
+                </StackPanel>
+            </StackPanel>
+        </WrapPanel>
+    </ScrollViewer>
+</UserControl>

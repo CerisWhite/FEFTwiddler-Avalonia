@@ -1,0 +1,78 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="FEFTwiddler.GUI.UnitViewer.Traits"
+        Width="700" Height="500"
+        WindowStartupLocation="CenterOwner">
+    <Grid RowDefinitions="*,Auto" Margin="8">
+        <ScrollViewer Grid.Row="0">
+            <WrapPanel>
+                <CheckBox x:Name="chkTrait_00_01" Content="Is Female" Margin="4" />
+                <CheckBox x:Name="chkTrait_00_02" Content="Hero" Margin="4" />
+                <CheckBox x:Name="chkTrait_00_04" Content="Player" Margin="4" />
+                <CheckBox x:Name="chkTrait_00_08" Content="Advanced Classes" Margin="4" />
+                <CheckBox x:Name="chkTrait_00_10" Content="Leader" Margin="4" />
+                <CheckBox x:Name="chkTrait_00_20" Content="Defeat Condition" Margin="4" />
+                <CheckBox x:Name="chkTrait_00_40" Content="Movement Ban" Margin="4" />
+                <CheckBox x:Name="chkTrait_00_80" Content="Hit Ban" Margin="4" />
+                <CheckBox x:Name="chkTrait_01_01" Content="Critical Ban" Margin="4" />
+                <CheckBox x:Name="chkTrait_01_02" Content="Avoid Ban" Margin="4" />
+                <CheckBox x:Name="chkTrait_01_04" Content="Force Hit" Margin="4" />
+                <CheckBox x:Name="chkTrait_01_08" Content="Force Critical" Margin="4" />
+                <CheckBox x:Name="chkTrait_01_10" Content="Force Avoid" Margin="4" />
+                <CheckBox x:Name="chkTrait_01_20" Content="Force Dodge" Margin="4" />
+                <CheckBox x:Name="chkTrait_01_40" Content="Resist Status" Margin="4" />
+                <CheckBox x:Name="chkTrait_01_80" Content="Immune Status" Margin="4" />
+                <CheckBox x:Name="chkTrait_02_01" Content="Negate Lethality" Margin="4" />
+                <CheckBox x:Name="chkTrait_02_02" Content="02_02" Margin="4" />
+                <CheckBox x:Name="chkTrait_02_04" Content="02_04" Margin="4" />
+                <CheckBox x:Name="chkTrait_02_08" Content="Double EXP When Defeated" Margin="4" />
+                <CheckBox x:Name="chkTrait_02_10" Content="Half EXP When Defeated" Margin="4" />
+                <CheckBox x:Name="chkTrait_02_20" Content="Rare Faceless EXP" Margin="4" />
+                <CheckBox x:Name="chkTrait_02_40" Content="EXP Correction" Margin="4" />
+                <CheckBox x:Name="chkTrait_02_80" Content="Is Manakete" Margin="4" />
+                <CheckBox x:Name="chkTrait_03_01" Content="Is Beast" Margin="4" />
+                <CheckBox x:Name="chkTrait_03_02" Content="Sing" Margin="4" />
+                <CheckBox x:Name="chkTrait_03_04" Content="Destroys Villages" Margin="4" />
+                <CheckBox x:Name="chkTrait_03_08" Content="Enemy Only" Margin="4" />
+                <CheckBox x:Name="chkTrait_03_10" Content="03_10" Margin="4" />
+                <CheckBox x:Name="chkTrait_03_20" Content="03_20" Margin="4" />
+                <CheckBox x:Name="chkTrait_03_40" Content="Takumi" Margin="4" />
+                <CheckBox x:Name="chkTrait_03_80" Content="Ryoma" Margin="4" />
+                <CheckBox x:Name="chkTrait_04_01" Content="Leo" Margin="4" />
+                <CheckBox x:Name="chkTrait_04_02" Content="Xander" Margin="4" />
+                <CheckBox x:Name="chkTrait_04_04" Content="Cannot Use Special Weapon" Margin="4" />
+                <CheckBox x:Name="chkTrait_04_08" Content="Can Use Dragon Vein" Margin="4" />
+                <CheckBox x:Name="chkTrait_04_10" Content="Cannot Use Attack Stance" Margin="4" />
+                <CheckBox x:Name="chkTrait_04_20" Content="Cannot Double Attack" Margin="4" />
+                <CheckBox x:Name="chkTrait_04_40" Content="Cannot Be Inherited" Margin="4" />
+                <CheckBox x:Name="chkTrait_04_80" Content="Cannot Be Obtained Via Support" Margin="4" />
+                <CheckBox x:Name="chkTrait_05_01" Content="Route Limited" Margin="4" />
+                <CheckBox x:Name="chkTrait_05_02" Content="05_02" Margin="4" />
+                <CheckBox x:Name="chkTrait_05_04" Content="Can Use Staff" Margin="4" />
+                <CheckBox x:Name="chkTrait_05_08" Content="Cannot Be Traded" Margin="4" />
+                <CheckBox x:Name="chkTrait_05_10" Content="Cannot Obtain EXP" Margin="4" />
+                <CheckBox x:Name="chkTrait_05_20" Content="Cannot Warp" Margin="4" />
+                <CheckBox x:Name="chkTrait_05_40" Content="Salesperson In My Castle" Margin="4" />
+                <CheckBox x:Name="chkTrait_05_80" Content="Defeat Condition Withdrawal" Margin="4" />
+                <CheckBox x:Name="chkTrait_06_01" Content="Ophelia" Margin="4" />
+                <CheckBox x:Name="chkTrait_06_02" Content="Cannot Trigger Offensive Skills" Margin="4" />
+                <CheckBox x:Name="chkTrait_06_04" Content="Trigger Offensive Skills" Margin="4" />
+                <CheckBox x:Name="chkTrait_06_08" Content="Ties" Margin="4" />
+                <CheckBox x:Name="chkTrait_06_10" Content="Captured Unit" Margin="4" />
+                <CheckBox x:Name="chkTrait_06_20" Content="Avoid -10" Margin="4" />
+                <CheckBox x:Name="chkTrait_06_40" Content="Avoid -20" Margin="4" />
+                <CheckBox x:Name="chkTrait_06_80" Content="Avoid +10" Margin="4" />
+                <CheckBox x:Name="chkTrait_07_01" Content="Avoid +20" Margin="4" />
+                <CheckBox x:Name="chkTrait_07_02" Content="Hit +10" Margin="4" />
+                <CheckBox x:Name="chkTrait_07_04" Content="Hit +20" Margin="4" />
+                <CheckBox x:Name="chkTrait_07_08" Content="Hit +30" Margin="4" />
+                <CheckBox x:Name="chkTrait_07_10" Content="07_10" Margin="4" />
+                <CheckBox x:Name="chkTrait_07_20" Content="Cannot Be Promoted" Margin="4" />
+                <CheckBox x:Name="chkTrait_07_40" Content="Is Amiibo" Margin="4" />
+                <CheckBox x:Name="chkTrait_07_80" Content="07_80" Margin="4" />
+            </WrapPanel>
+        </ScrollViewer>
+        <Button Grid.Row="1" x:Name="btnClose" Content="Close" Click="BtnClose_Click"
+                HorizontalAlignment="Right" Margin="0,8,0,0" MinWidth="75" />
+    </Grid>
+</Window>

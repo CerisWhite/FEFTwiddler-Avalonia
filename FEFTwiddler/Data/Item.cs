@@ -1,5 +1,3 @@
-﻿using System.Drawing;
-
 namespace FEFTwiddler.Data
 {
     public class Item
@@ -25,80 +23,47 @@ namespace FEFTwiddler.Data
         /// </summary>
         public bool IsMapOnly { get; set; }
 
-
-        public Bitmap GetIcon()
+        /// <summary>
+        /// Returns the avares:// URI for the item type icon.
+        /// </summary>
+        public string GetIconPath()
         {
-            var imageName = "";
-
-            switch (SubType)
+            var imageName = SubType switch
             {
-                case Enums.ItemSubType.Sword:
-                    imageName = "ItemSubType_Sword"; break;
-                case Enums.ItemSubType.Katana:
-                    imageName = "ItemSubType_Katana"; break;
-                case Enums.ItemSubType.Lance:
-                    imageName = "ItemSubType_Lance"; break;
-                case Enums.ItemSubType.Naginata:
-                    imageName = "ItemSubType_Naginata"; break;
-                case Enums.ItemSubType.Axe:
-                    imageName = "ItemSubType_Axe"; break;
-                case Enums.ItemSubType.Club:
-                    imageName = "ItemSubType_Club"; break;
-                case Enums.ItemSubType.Dagger:
-                    imageName = "ItemSubType_Dagger"; break;
-                case Enums.ItemSubType.Shuriken:
-                    imageName = "ItemSubType_Shuriken"; break;
-                case Enums.ItemSubType.Bow:
-                    imageName = "ItemSubType_Bow"; break;
-                case Enums.ItemSubType.Yumi:
-                    imageName = "ItemSubType_Yumi"; break;
-                case Enums.ItemSubType.Tome:
-                    imageName = "ItemSubType_Tome"; break;
-                case Enums.ItemSubType.Scroll:
-                    imageName = "ItemSubType_Scroll"; break;
-                case Enums.ItemSubType.Staff:
-                    imageName = "ItemSubType_Staff"; break;
-                case Enums.ItemSubType.Rod:
-                    imageName = "ItemSubType_Rod"; break;
-                case Enums.ItemSubType.Dragonstone:
-                    imageName = "ItemSubType_Dragonstone"; break;
-                case Enums.ItemSubType.Beaststone:
-                    imageName = "ItemSubType_Beaststone"; break;
-                case Enums.ItemSubType.HealingItem:
-                    imageName = "ItemSubType_HealingItem"; break;
-                case Enums.ItemSubType.StatTonic:
-                case Enums.ItemSubType.StatBooster:
-                    imageName = "ItemSubType_StatBooster"; break;
-                case Enums.ItemSubType.SpecialConsumable:
-                    imageName = "ItemSubType_SpecialConsumable"; break;
-                case Enums.ItemSubType.ClassChanger:
-                    imageName = "ItemSubType_ClassChanger"; break;
-                case Enums.ItemSubType.SkillScroll:
-                    imageName = "ItemSubType_SkillScroll"; break;
-                case Enums.ItemSubType.Emblem:
-                    imageName = "ItemSubType_Emblem"; break;
-                case Enums.ItemSubType.Breath:
-                    imageName = "ItemSubType_Breath"; break;
-                case Enums.ItemSubType.Fist:
-                    imageName = "ItemSubType_Fist"; break;
-                case Enums.ItemSubType.Rock:
-                    imageName = "ItemSubType_Rock"; break;
-                case Enums.ItemSubType.Saw:
-                    imageName = "ItemSubType_Saw"; break;
-                case Enums.ItemSubType.GoldBar:
-                    imageName = "ItemSubType_GoldBar"; break;
-                case Enums.ItemSubType.Gold:
-                    imageName = "ItemSubType_Gold"; break;
-                case Enums.ItemSubType.Key:
-                    imageName = "ItemSubType_Key"; break;
-                case Enums.ItemSubType.Obstacle:
-                    imageName = "ItemSubType_Obstacle"; break;
-                case Enums.ItemSubType.Unknown:
-                default:
-                    imageName = "ItemSubType_Unknown"; break;
-            }
+                Enums.ItemSubType.Sword => "ItemSubType_Sword",
+                Enums.ItemSubType.Katana => "ItemSubType_Katana",
+                Enums.ItemSubType.Lance => "ItemSubType_Lance",
+                Enums.ItemSubType.Naginata => "ItemSubType_Naginata",
+                Enums.ItemSubType.Axe => "ItemSubType_Axe",
+                Enums.ItemSubType.Club => "ItemSubType_Club",
+                Enums.ItemSubType.Dagger => "ItemSubType_Dagger",
+                Enums.ItemSubType.Shuriken => "ItemSubType_Shuriken",
+                Enums.ItemSubType.Bow => "ItemSubType_Bow",
+                Enums.ItemSubType.Yumi => "ItemSubType_Yumi",
+                Enums.ItemSubType.Tome => "ItemSubType_Tome",
+                Enums.ItemSubType.Scroll => "ItemSubType_Scroll",
+                Enums.ItemSubType.Staff => "ItemSubType_Staff",
+                Enums.ItemSubType.Rod => "ItemSubType_Rod",
+                Enums.ItemSubType.Dragonstone => "ItemSubType_Dragonstone",
+                Enums.ItemSubType.Beaststone => "ItemSubType_Beaststone",
+                Enums.ItemSubType.HealingItem => "ItemSubType_HealingItem",
+                Enums.ItemSubType.StatTonic or Enums.ItemSubType.StatBooster => "ItemSubType_StatBooster",
+                Enums.ItemSubType.SpecialConsumable => "ItemSubType_SpecialConsumable",
+                Enums.ItemSubType.ClassChanger => "ItemSubType_ClassChanger",
+                Enums.ItemSubType.SkillScroll => "ItemSubType_SkillScroll",
+                Enums.ItemSubType.Emblem => "ItemSubType_Emblem",
+                Enums.ItemSubType.Breath => "ItemSubType_Breath",
+                Enums.ItemSubType.Fist => "ItemSubType_Fist",
+                Enums.ItemSubType.Rock => "ItemSubType_Rock",
+                Enums.ItemSubType.Saw => "ItemSubType_Saw",
+                Enums.ItemSubType.GoldBar => "ItemSubType_GoldBar",
+                Enums.ItemSubType.Gold => "ItemSubType_Gold",
+                Enums.ItemSubType.Key => "ItemSubType_Key",
+                Enums.ItemSubType.Obstacle => "ItemSubType_Obstacle",
+                _ => "ItemSubType_Unknown"
+            };
 
-            return (Bitmap)Properties.Resources.ResourceManager.GetObject(imageName);
+            return $"avares://FEFTwiddler/Resources/Images/ItemIcons/{imageName}.png";
         }
     }
 }

@@ -10,7 +10,7 @@ namespace FEFTwiddler.Data
     {
         public PrisonerDatabase(Enums.Language language) : base(language)
         {
-            LoadData(Properties.Resources.Data_Prisoners);
+            LoadDataFromAsset("Prisoners.xml");
         }
 
         public Prisoner GetByID(byte prisonerId)

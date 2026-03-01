@@ -1,0 +1,30 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="FEFTwiddler.GUI.UnitViewer.ClassAndLevel">
+    <WrapPanel>
+        <StackPanel Orientation="Horizontal" Spacing="4" Margin="0,0,12,4" VerticalAlignment="Center">
+            <TextBlock Text="Class:" VerticalAlignment="Center" Width="100" />
+            <ComboBox x:Name="cmbClass" Width="200" DisplayMemberBinding="{Binding DisplayName}" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Spacing="4" Margin="0,0,12,4" VerticalAlignment="Center">
+            <TextBlock Text="Level:" VerticalAlignment="Center" Width="100" />
+            <NumericUpDown x:Name="numLevel" Minimum="1" Maximum="40" Width="110" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Spacing="4" Margin="0,0,12,4" VerticalAlignment="Center">
+            <TextBlock Text="Int. Level:" VerticalAlignment="Center" Width="100" />
+            <NumericUpDown x:Name="numInternalLevel" Minimum="0" Maximum="255" Width="110" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Spacing="4" Margin="0,0,12,4" VerticalAlignment="Center">
+            <TextBlock Text="EXP:" VerticalAlignment="Center" Width="100" />
+            <NumericUpDown x:Name="numExperience" Minimum="0" Maximum="99" Width="110" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Spacing="4" Margin="0,0,12,4" VerticalAlignment="Center">
+            <TextBlock Text="Eternal Seals:" VerticalAlignment="Center" Width="100" />
+            <NumericUpDown x:Name="numEternalSeals" Minimum="0" Maximum="255" Width="110" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Spacing="4" Margin="0,0,12,4" VerticalAlignment="Center">
+            <TextBlock Text="Boots:" VerticalAlignment="Center" Width="100" />
+            <NumericUpDown x:Name="numBoots" Minimum="0" Maximum="255" Width="110" />
+        </StackPanel>
+    </WrapPanel>
+</UserControl>

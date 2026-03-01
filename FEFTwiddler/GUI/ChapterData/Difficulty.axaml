@@ -1,0 +1,18 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="FEFTwiddler.GUI.ChapterData.Difficulty">
+    <StackPanel Spacing="4">
+        <TextBlock Text="Difficulty" FontWeight="Bold" />
+        <StackPanel Orientation="Horizontal" Spacing="8">
+            <RadioButton x:Name="rdoNormal" Content="Normal" GroupName="Difficulty" />
+            <RadioButton x:Name="rdoHard" Content="Hard" GroupName="Difficulty" />
+            <RadioButton x:Name="rdoLunatic" Content="Lunatic" GroupName="Difficulty" />
+        </StackPanel>
+        <TextBlock Text="Mode" FontWeight="Bold" />
+        <StackPanel Orientation="Horizontal" Spacing="8">
+            <RadioButton x:Name="rdoClassic" Content="Classic" GroupName="Mode" />
+            <RadioButton x:Name="rdoCasual" Content="Casual" GroupName="Mode" />
+            <RadioButton x:Name="rdoPhoenix" Content="Phoenix" GroupName="Mode" />
+        </StackPanel>
+    </StackPanel>
+</UserControl>

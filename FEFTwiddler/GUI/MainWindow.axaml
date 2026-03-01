@@ -1,0 +1,126 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:chapterData="clr-namespace:FEFTwiddler.GUI.ChapterData"
+        xmlns:unitViewer="clr-namespace:FEFTwiddler.GUI.UnitViewer"
+        xmlns:convoy="clr-namespace:FEFTwiddler.GUI.Convoy"
+        xmlns:gameProgress="clr-namespace:FEFTwiddler.GUI.GameProgress"
+        xmlns:globalData="clr-namespace:FEFTwiddler.GUI.GlobalData"
+        x:Class="FEFTwiddler.GUI.MainWindow"
+        Title="FEFTwiddler"
+        Width="1000" Height="700">
+
+    <DockPanel>
+        <!-- Menu Bar -->
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_File">
+                <MenuItem Header="_Open..." Click="OpenFile_Click" />
+                <MenuItem Header="_Save" Click="SaveFile_Click" />
+            </MenuItem>
+            <MenuItem Header="_Decompressor">
+                <MenuItem Header="_Decompress File..." Click="DecompressFile_Click" />
+                <MenuItem Header="_Compress File..." Click="CompressFile_Click" />
+            </MenuItem>
+        </Menu>
+
+        <!-- Main Content -->
+        <TabControl x:Name="tabControl1" IsEnabled="False">
+            <!-- Chapter Data Tab -->
+            <TabItem x:Name="tabChapterData" Header="Chapter Data" IsEnabled="False">
+                <StackPanel Margin="8" Spacing="8">
+                    <TextBlock x:Name="lblAvatarName" FontWeight="Bold" />
+                    <chapterData:Difficulty x:Name="difficulty1" />
+                    <chapterData:GoldAndPoints x:Name="goldAndPoints1" />
+                    <chapterData:Materials x:Name="materials1" />
+                    <Button x:Name="btnCastleMap" Content="Castle Map" Click="BtnCastleMap_Click" />
+                </StackPanel>
+            </TabItem>
+
+            <!-- Unit Viewer Tab -->
+            <TabItem x:Name="tabUnitViewer" Header="Unit Viewer" IsEnabled="False">
+                <Grid ColumnDefinitions="200,*">
+                    <!-- Left: unit lists -->
+                    <DockPanel Grid.Column="0" Margin="4">
+                        <StackPanel DockPanel.Dock="Top" Spacing="4">
+                            <TextBlock Text="Living" FontWeight="Bold" />
+                            <ListBox x:Name="lstLiving" Height="200"
+                                     SelectionChanged="LstLiving_SelectionChanged"
+                                     DisplayMemberBinding="{Binding DisplayName}" />
+                            <TextBlock Text="Dead" FontWeight="Bold" />
+                            <ListBox x:Name="lstDead" Height="120"
+                                     SelectionChanged="LstDead_SelectionChanged"
+                                     DisplayMemberBinding="{Binding DisplayName}" />
+                            <TextBlock x:Name="lblUnitCount" />
+                        </StackPanel>
+                        <StackPanel DockPanel.Dock="Bottom" Spacing="4" Margin="0,8,0,0">
+                            <Button x:Name="btnImportUnit" Content="Import Unit..." Click="BtnImportUnit_Click" />
+                            <Button x:Name="btnExportUnit" Content="Export Unit..." Click="BtnExportUnit_Click" />
+                            <Button x:Name="btnDeleteUnit" Content="Delete Unit" Foreground="Red" Click="BtnDeleteUnit_Click" />
+                        </StackPanel>
+                    </DockPanel>
+
+                    <!-- Right: unit editor panel -->
+                    <Grid Grid.Column="1" x:Name="pnlUnitView">
+                        <ScrollViewer>
+                            <StackPanel Margin="4" Spacing="4">
+                                <TextBlock x:Name="lblName" FontSize="16" FontWeight="Bold" />
+                                <TextBlock x:Name="lblUsesCustomData"
+                                           Text="(Uses custom character/class data)"
+                                           Foreground="Magenta"
+                                           IsVisible="False" />
+                                <unitViewer:ClassAndLevel x:Name="classAndLevel1" />
+                                <unitViewer:Stats x:Name="stats1" />
+                                <unitViewer:UnitBlockInfo x:Name="unitBlockInfo1" />
+                                <unitViewer:Flags x:Name="flags1" />
+                                <unitViewer:BattleData x:Name="battleData1" />
+                                <Border BorderThickness="1" BorderBrush="Gray" Padding="4">
+                                    <unitViewer:Skills x:Name="skills1" />
+                                </Border>
+                                <unitViewer:Inventory x:Name="inventory1" />
+                                <unitViewer:Accessories x:Name="accessories1" />
+                                <unitViewer:HairColor x:Name="hairColor1" />
+                                <unitViewer:WeaponExperience x:Name="weaponExperience1" />
+                                <unitViewer:DragonVein x:Name="dragonVein1" />
+                                <StackPanel Orientation="Horizontal" Spacing="8">
+                                    <Button x:Name="btnSupport" Content="Supports" Click="BtnSupport_Click" />
+                                    <Button x:Name="btnTraits" Content="Traits" Click="BtnTraits_Click" />
+                                    <Button x:Name="btnOpenHexEditor" Content="Hex Editor" Click="BtnOpenHexEditor_Click" />
+                                </StackPanel>
+                            </StackPanel>
+                        </ScrollViewer>
+                        <!-- Blanket overlay shown when unit has errors -->
+                        <Border x:Name="unitViewerBlanket"
+                                Background="#DDFFFFFF"
+                                IsVisible="False"
+                                ZIndex="10">
+                            <TextBlock x:Name="lblBlanketMessage"
+                                       TextWrapping="Wrap"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       Margin="20" />
+                        </Border>
+                    </Grid>
+                </Grid>
+            </TabItem>
+
+            <!-- Megacheats Tab -->
+            <TabItem x:Name="tabMegacheats" Header="Megacheats" IsEnabled="False">
+                <chapterData:MegacheatsMain x:Name="megacheatsMain1" />
+            </TabItem>
+
+            <!-- Convoy Tab -->
+            <TabItem x:Name="tabConvoy" Header="Convoy" IsEnabled="False">
+                <convoy:ConvoyMain x:Name="convoyMain1" />
+            </TabItem>
+
+            <!-- Game Progress Tab -->
+            <TabItem x:Name="tabGameProgress" Header="Game Progress" IsEnabled="False">
+                <gameProgress:GameProgressMain x:Name="gameProgressMain1" />
+            </TabItem>
+
+            <!-- Global Data Tab -->
+            <TabItem x:Name="tabGlobalData" Header="Global Data" IsEnabled="False">
+                <globalData:GlobalDataMain x:Name="globalDataMain1" />
+            </TabItem>
+        </TabControl>
+    </DockPanel>
+</Window>

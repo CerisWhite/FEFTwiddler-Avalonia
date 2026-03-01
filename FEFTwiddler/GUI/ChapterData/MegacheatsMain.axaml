@@ -1,0 +1,25 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:megacheats="clr-namespace:FEFTwiddler.GUI.ChapterData.Megacheats"
+             x:Class="FEFTwiddler.GUI.ChapterData.MegacheatsMain">
+    <ScrollViewer>
+        <StackPanel Margin="8" Spacing="8">
+            <WrapPanel>
+                <Button x:Name="btnAllCharMaxStatue" Content="Max Statues (All Units)" Margin="4" Click="BtnAllCharMaxStatue_Click" />
+                <Button x:Name="btnGiveEternalSeals" Content="Give Eternal Seals (All Units)" Margin="4" Click="BtnGiveEternalSeals_Click" />
+                <Button x:Name="btnMaxWeaponExp" Content="S-Rank All Weapons (All Units)" Margin="4" Click="BtnMaxWeaponExp_Click" />
+                <Button x:Name="btnMaxBoots" Content="Max Boots (All Units)" Margin="4" Click="BtnMaxBoots_Click" />
+                <Button x:Name="btn1Boots" Content="1 Boot (All Units)" Margin="4" Click="Btn1Boots_Click" />
+                <Button x:Name="btn0Boots" Content="0 Boots (All Units)" Margin="4" Click="Btn0Boots_Click" />
+                <Button x:Name="btnMaxStats" Content="Max Stats (All Units)" Margin="4" Click="BtnMaxStats_Click" />
+                <Button x:Name="btnGiveDragonBlood" Content="Give Dragon Blood (All Units)" Margin="4" Click="BtnGiveDragonBlood_Click" />
+                <Button x:Name="btnHearSealDlc" Content="Unlock DLC Classes (All Units)" Margin="4" Click="BtnHearSealDlc_Click" />
+                <Button x:Name="btnResetSupports" Content="Reset Supports" Margin="4" Click="BtnResetSupports_Click" />
+                <Button x:Name="btnStatBonuses" Content="Max Stat Bonuses (All Units)" Margin="4" Click="BtnStatBonuses_Click" />
+                <Button x:Name="btnMysteryCheat" Content="Mystery Cheat" Margin="4" Click="BtnMysteryCheat_Click" />
+                <Button x:Name="btnUnlockAllStatues" Content="Unlock All Statues" Margin="4" Click="BtnUnlockAllStatues_Click" />
+            </WrapPanel>
+            <megacheats:Skills x:Name="skills1" />
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

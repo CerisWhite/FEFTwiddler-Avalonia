@@ -1,0 +1,91 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="clr-namespace:FEFTwiddler.GUI.Controls"
+        x:Class="FEFTwiddler.GUI.GlobalData.HairColors"
+        Title="Hair Colors"
+        Width="500"
+        SizeToContent="Height"
+        CanResize="False">
+    <StackPanel Spacing="8" Margin="8">
+        <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto">
+            <!-- Row 0 -->
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="Corrin (M)" VerticalAlignment="Center" />
+            <controls:ColorPicker x:Name="colorCorrinM" Grid.Row="0" Grid.Column="1" />
+            <!-- Row 1 -->
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="Corrin (F)" VerticalAlignment="Center" />
+            <controls:ColorPicker x:Name="colorCorrinF" Grid.Row="1" Grid.Column="1" />
+            <!-- Row 2 -->
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="Kana (M)" VerticalAlignment="Center" />
+            <controls:ColorPicker x:Name="colorKanaM" Grid.Row="2" Grid.Column="1" />
+            <!-- Row 3 -->
+            <TextBlock Grid.Row="3" Grid.Column="0" Text="Kana (F)" VerticalAlignment="Center" />
+            <controls:ColorPicker x:Name="colorKanaF" Grid.Row="3" Grid.Column="1" />
+            <!-- Row 4 -->
+            <TextBlock Grid.Row="4" Grid.Column="0" Text="Shigure" VerticalAlignment="Center" />
+            <controls:ColorPicker x:Name="colorShigure" Grid.Row="4" Grid.Column="1" />
+            <!-- Row 5 -->
+            <TextBlock Grid.Row="5" Grid.Column="0" Text="Dwyer" VerticalAlignment="Center" />
+            <controls:ColorPicker x:Name="colorDwyer" Grid.Row="5" Grid.Column="1" />
+            <!-- Row 6 -->
+            <TextBlock Grid.Row="6" Grid.Column="0" Text="Sophie" VerticalAlignment="Center" />
+            <controls:ColorPicker x:Name="colorSophie" Grid.Row="6" Grid.Column="1" />
+            <!-- Row 7 -->
+            <TextBlock Grid.Row="7" Grid.Column="0" Text="Midori" VerticalAlignment="Center" />
+            <controls:ColorPicker x:Name="colorMidori" Grid.Row="7" Grid.Column="1" />
+            <!-- Row 8 -->
+            <TextBlock Grid.Row="8" Grid.Column="0" Text="Shiro" VerticalAlignment="Center" />
+            <controls:ColorPicker x:Name="colorShiro" Grid.Row="8" Grid.Column="1" />
+            <!-- Row 9 -->
+            <TextBlock Grid.Row="9" Grid.Column="0" Text="Kiragi" VerticalAlignment="Center" />
+            <controls:ColorPicker x:Name="colorKiragi" Grid.Row="9" Grid.Column="1" />
+            <!-- Row 10 -->
+            <TextBlock Grid.Row="10" Grid.Column="0" Text="Asugi" VerticalAlignment="Center" />
+            <controls:ColorPicker x:Name="colorAsugi" Grid.Row="10" Grid.Column="1" />
+            <!-- Row 11 -->
+            <TextBlock Grid.Row="11" Grid.Column="0" Text="Selkie" VerticalAlignment="Center" />
+            <controls:ColorPicker x:Name="colorSelkie" Grid.Row="11" Grid.Column="1" />
+        </Grid>
+        <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto">
+            <!-- Row 0 -->
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="Hisame" VerticalAlignment="Center" />
+            <controls:ColorPicker x:Name="colorHisame" Grid.Row="0" Grid.Column="1" />
+            <!-- Row 1 -->
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="Mitama" VerticalAlignment="Center" />
+            <controls:ColorPicker x:Name="colorMitama" Grid.Row="1" Grid.Column="1" />
+            <!-- Row 2 -->
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="Caeldori" VerticalAlignment="Center" />
+            <controls:ColorPicker x:Name="colorCaeldori" Grid.Row="2" Grid.Column="1" />
+            <!-- Row 3 -->
+            <TextBlock Grid.Row="3" Grid.Column="0" Text="Rhajat" VerticalAlignment="Center" />
+            <controls:ColorPicker x:Name="colorRhajat" Grid.Row="3" Grid.Column="1" />
+            <!-- Row 4 -->
+            <TextBlock Grid.Row="4" Grid.Column="0" Text="Siegbert" VerticalAlignment="Center" />
+            <controls:ColorPicker x:Name="colorSiegbert" Grid.Row="4" Grid.Column="1" />
+            <!-- Row 5 -->
+            <TextBlock Grid.Row="5" Grid.Column="0" Text="Forrest" VerticalAlignment="Center" />
+            <controls:ColorPicker x:Name="colorForrest" Grid.Row="5" Grid.Column="1" />
+            <!-- Row 6 -->
+            <TextBlock Grid.Row="6" Grid.Column="0" Text="Ignatius" VerticalAlignment="Center" />
+            <controls:ColorPicker x:Name="colorIgnatius" Grid.Row="6" Grid.Column="1" />
+            <!-- Row 7 -->
+            <TextBlock Grid.Row="7" Grid.Column="0" Text="Velouria" VerticalAlignment="Center" />
+            <controls:ColorPicker x:Name="colorVelouria" Grid.Row="7" Grid.Column="1" />
+            <!-- Row 8 -->
+            <TextBlock Grid.Row="8" Grid.Column="0" Text="Percy" VerticalAlignment="Center" />
+            <controls:ColorPicker x:Name="colorPercy" Grid.Row="8" Grid.Column="1" />
+            <!-- Row 9 -->
+            <TextBlock Grid.Row="9" Grid.Column="0" Text="Ophelia" VerticalAlignment="Center" />
+            <controls:ColorPicker x:Name="colorOphelia" Grid.Row="9" Grid.Column="1" />
+            <!-- Row 10 -->
+            <TextBlock Grid.Row="10" Grid.Column="0" Text="Soleil" VerticalAlignment="Center" />
+            <controls:ColorPicker x:Name="colorSoleil" Grid.Row="10" Grid.Column="1" />
+            <!-- Row 11 -->
+            <TextBlock Grid.Row="11" Grid.Column="0" Text="Nina" VerticalAlignment="Center" />
+            <controls:ColorPicker x:Name="colorNina" Grid.Row="11" Grid.Column="1" />
+        </Grid>
+        <StackPanel Orientation="Horizontal" Spacing="8" HorizontalAlignment="Right">
+            <Button x:Name="btnSaveAndClose" Content="Save and Close" Click="BtnSaveAndClose_Click" />
+            <Button x:Name="btnCancel" Content="Cancel" Click="BtnCancel_Click" />
+        </StackPanel>
+    </StackPanel>
+</Window>

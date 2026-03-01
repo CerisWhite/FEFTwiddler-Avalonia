@@ -1,0 +1,19 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="FEFTwiddler.GUI.GameProgress.GameProgressMain">
+    <Grid ColumnDefinitions="*,*" Margin="8">
+        <StackPanel Grid.Column="0" Spacing="8">
+            <TextBlock Text="Completed Chapters" FontWeight="Bold" />
+            <ScrollViewer MaxHeight="400">
+                <StackPanel x:Name="flwChaptersCompleted" Spacing="2" />
+            </ScrollViewer>
+            <Button x:Name="btnUnlockAmiiboChapters" Content="Unlock Amiibo Chapters" Click="BtnUnlockAmiiboChapters_Click" HorizontalAlignment="Left" />
+        </StackPanel>
+        <StackPanel Grid.Column="1" Spacing="8" Margin="8,0,0,0">
+            <TextBlock Text="Available Battlefields" FontWeight="Bold" />
+            <ScrollViewer MaxHeight="400">
+                <StackPanel x:Name="flwBattlefieldsAvailable" Spacing="2" />
+            </ScrollViewer>
+        </StackPanel>
+    </Grid>
+</UserControl>

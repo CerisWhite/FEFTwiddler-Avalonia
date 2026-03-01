@@ -10,7 +10,7 @@ namespace FEFTwiddler.Data
     {
         public ClassDatabase(Enums.Language language) : base(language)
         {
-            LoadData(Properties.Resources.Data_Classes);
+            LoadDataFromAsset("Classes.xml");
             LoadAddonData("Classes");
         }
 

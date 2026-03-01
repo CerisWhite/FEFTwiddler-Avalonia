@@ -1,0 +1,8 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="FEFTwiddler.GUI.UnitViewer.Flags">
+    <StackPanel Orientation="Horizontal" Spacing="12">
+        <CheckBox x:Name="chkEinherjar" Content="Einherjar (use with caution)" />
+        <CheckBox x:Name="chkRecruited" Content="Recruited (use with caution)" />
+    </StackPanel>
+</UserControl>

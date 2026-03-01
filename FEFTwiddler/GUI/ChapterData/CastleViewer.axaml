@@ -1,0 +1,33 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="FEFTwiddler.GUI.ChapterData.CastleViewer"
+        Title="Castle Viewer"
+        Width="700"
+        Height="500"
+        CanResize="True">
+    <Grid ColumnDefinitions="*,250" Margin="8">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!-- Castle map canvas -->
+        <ScrollViewer Grid.Row="0" Grid.Column="0">
+            <ContentControl x:Name="castleMapHost" />
+        </ScrollViewer>
+
+        <!-- Building list -->
+        <StackPanel Grid.Row="0" Grid.Column="1" Margin="8,0,0,0" Spacing="4">
+            <TextBlock Text="Buildings" FontWeight="Bold" />
+            <ScrollViewer MaxHeight="400">
+                <TextBox x:Name="txtBuildingList" IsReadOnly="True" AcceptsReturn="True" TextWrapping="Wrap" />
+            </ScrollViewer>
+            <TextBlock x:Name="lblSelectedBuilding" Text="Selected: (none)" />
+        </StackPanel>
+
+        <!-- Close button -->
+        <Button Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+                Content="Close" HorizontalAlignment="Right" Margin="0,8,0,0"
+                Click="BtnClose_Click" />
+    </Grid>
+</Window>

@@ -1,0 +1,16 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="FEFTwiddler.GUI.ChapterData.GoldAndPoints">
+    <StackPanel Spacing="4">
+        <StackPanel Orientation="Horizontal" Spacing="8" VerticalAlignment="Center">
+            <TextBlock Text="Gold:" VerticalAlignment="Center" Width="100" />
+            <NumericUpDown x:Name="numGold" Minimum="0" Maximum="999999" Width="150" />
+            <Button x:Name="btnMaxGold" Content="Max" Click="BtnMaxGold_Click" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Spacing="8" VerticalAlignment="Center">
+            <TextBlock Text="Dragon Vein Points:" VerticalAlignment="Center" Width="100" />
+            <NumericUpDown x:Name="numDragonVeinPoints" Minimum="0" Maximum="99" Width="110" />
+            <Button x:Name="btn99DragonVeinPoints" Content="99" Click="Btn99DragonVeinPoints_Click" />
+        </StackPanel>
+    </StackPanel>
+</UserControl>

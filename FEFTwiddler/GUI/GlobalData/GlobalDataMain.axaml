@@ -1,0 +1,8 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="FEFTwiddler.GUI.GlobalData.GlobalDataMain">
+    <StackPanel Spacing="8" Margin="8">
+        <Button x:Name="btnUnlockSupportLog" Content="Unlock Support Log" Click="BtnUnlockSupportLog_Click" HorizontalAlignment="Left" />
+        <Button x:Name="btnHairColors" Content="Edit Hair Colors..." Click="BtnHairColors_Click" HorizontalAlignment="Left" />
+    </StackPanel>
+</UserControl>

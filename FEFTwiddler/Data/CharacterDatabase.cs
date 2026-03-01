@@ -11,7 +11,7 @@ namespace FEFTwiddler.Data
     {
         public CharacterDatabase(Enums.Language language) : base(language)
         {
-            LoadData(Properties.Resources.Data_Characters);
+            LoadDataFromAsset("Characters.xml");
             LoadAddonData("Characters");
         }
 

@@ -1,15 +1,14 @@
-﻿using System.ComponentModel;
+using System;
 using System.IO;
 using System.Linq;
 using System.Xml.Linq;
-using System.Windows.Forms;
 using FEFTwiddler.Extensions;
 
 namespace FEFTwiddler
 {
     public static class Config
     {
-        private static string _configPath = Application.StartupPath + "\\Config.xml";
+        private static string _configPath = Path.Combine(AppContext.BaseDirectory, "Config.xml");
 
         public static string StartupPath
         {
@@ -45,19 +44,11 @@ namespace FEFTwiddler
             }
         }
 
-        /// <summary>
-        /// Are we running in design mode in Visual Studio?
-        /// </summary>
-        public static bool InDesignMode()
-        {
-            return LicenseManager.UsageMode == LicenseUsageMode.Designtime;
-        }
-
         private static XElement GetConfigRoot()
         {
             try
             {
-                return XDocument.Load(_configPath).Root;
+                return XDocument.Load(_configPath).Root!;
             }
             catch (FileNotFoundException)
             {
@@ -65,13 +56,13 @@ namespace FEFTwiddler
 <root>
   <misc startupPath="""" unitPath="""" />
 </root>
-                ").Root;
+                ").Root!;
             }
         }
 
         private static void SetConfigRoot(XElement root)
         {
-            root.Document.Save(_configPath);
+            root.Document!.Save(_configPath);
         }
     }
 }

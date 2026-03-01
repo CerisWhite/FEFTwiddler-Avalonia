@@ -10,7 +10,7 @@ namespace FEFTwiddler.Data
     {
         public ChapterDatabase(Enums.Language language) : base(language)
         {
-            LoadData(Properties.Resources.Data_Chapters);
+            LoadDataFromAsset("Chapters.xml");
         }
 
         public Chapter GetByID(Enums.Chapter chapterId)

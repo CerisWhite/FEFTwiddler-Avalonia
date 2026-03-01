@@ -1,0 +1,54 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="FEFTwiddler.GUI.UnitViewer.WeaponExperience">
+    <WrapPanel>
+        <StackPanel Orientation="Horizontal" Spacing="4" Margin="0,0,8,4" VerticalAlignment="Center">
+            <Image x:Name="imgSword" Width="20" Height="20" />
+            <TextBlock Text="Sword:" VerticalAlignment="Center" Width="100" />
+            <NumericUpDown x:Name="numSword" Minimum="0" Maximum="255" Width="110" />
+            <TextBlock x:Name="lblSwordRank" Text="E" VerticalAlignment="Center" Width="20" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Spacing="4" Margin="0,0,8,4" VerticalAlignment="Center">
+            <Image x:Name="imgLance" Width="20" Height="20" />
+            <TextBlock Text="Lance:" VerticalAlignment="Center" Width="100" />
+            <NumericUpDown x:Name="numLance" Minimum="0" Maximum="255" Width="110" />
+            <TextBlock x:Name="lblLanceRank" Text="E" VerticalAlignment="Center" Width="20" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Spacing="4" Margin="0,0,8,4" VerticalAlignment="Center">
+            <Image x:Name="imgAxe" Width="20" Height="20" />
+            <TextBlock Text="Axe:" VerticalAlignment="Center" Width="100" />
+            <NumericUpDown x:Name="numAxe" Minimum="0" Maximum="255" Width="110" />
+            <TextBlock x:Name="lblAxeRank" Text="E" VerticalAlignment="Center" Width="20" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Spacing="4" Margin="0,0,8,4" VerticalAlignment="Center">
+            <Image x:Name="imgShuriken" Width="20" Height="20" />
+            <TextBlock Text="Shuriken:" VerticalAlignment="Center" Width="100" />
+            <NumericUpDown x:Name="numShuriken" Minimum="0" Maximum="255" Width="110" />
+            <TextBlock x:Name="lblShurikenRank" Text="E" VerticalAlignment="Center" Width="20" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Spacing="4" Margin="0,0,8,4" VerticalAlignment="Center">
+            <Image x:Name="imgBow" Width="20" Height="20" />
+            <TextBlock Text="Bow:" VerticalAlignment="Center" Width="100" />
+            <NumericUpDown x:Name="numBow" Minimum="0" Maximum="255" Width="110" />
+            <TextBlock x:Name="lblBowRank" Text="E" VerticalAlignment="Center" Width="20" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Spacing="4" Margin="0,0,8,4" VerticalAlignment="Center">
+            <Image x:Name="imgTome" Width="20" Height="20" />
+            <TextBlock Text="Tome:" VerticalAlignment="Center" Width="100" />
+            <NumericUpDown x:Name="numTome" Minimum="0" Maximum="255" Width="110" />
+            <TextBlock x:Name="lblTomeRank" Text="E" VerticalAlignment="Center" Width="20" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Spacing="4" Margin="0,0,8,4" VerticalAlignment="Center">
+            <Image x:Name="imgStaff" Width="20" Height="20" />
+            <TextBlock Text="Staff:" VerticalAlignment="Center" Width="100" />
+            <NumericUpDown x:Name="numStaff" Minimum="0" Maximum="255" Width="110" />
+            <TextBlock x:Name="lblStaffRank" Text="E" VerticalAlignment="Center" Width="20" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Spacing="4" Margin="0,0,8,4" VerticalAlignment="Center">
+            <Image x:Name="imgStone" Width="20" Height="20" />
+            <TextBlock Text="Stone:" VerticalAlignment="Center" Width="100" />
+            <NumericUpDown x:Name="numStone" Minimum="0" Maximum="255" Width="110" IsEnabled="False" />
+            <TextBlock x:Name="lblStoneRank" Text="E" VerticalAlignment="Center" Width="20" />
+        </StackPanel>
+    </WrapPanel>
+</UserControl>
